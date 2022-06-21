@@ -1,9 +1,13 @@
+import {AllSimpsons} from "./components/simpsons/AllSimpsons";
+import {Users} from "./components/rickandmorty/Users";
+
 function App() {
-  return (
-      <div>
-            App
-      </div>
-  );
+    return (
+        <div>
+            <Users/>
+            <AllSimpsons/>
+        </div>
+    );
 }
 
 export default App;
