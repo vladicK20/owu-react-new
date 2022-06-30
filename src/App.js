@@ -7,13 +7,14 @@ import {postService} from "./services";
 function App() {
     const [posts, setPosts] = useState([]);
 
-     const postDetail = (id) => {
-         postService.getPostById(id).then(({data})=>setPosts([...data]))
-     }
+    const postDetail = (id) => {
+        postService.getPostById(id).then(({data}) => setPosts([...data]))
+        console.log(id)
+    }
     return (
         <div>
             {
-                posts.map(post=> <Posts key={post.id} postItem={post}/>)
+                posts.map(post => <Posts key={post.id} postItem={post}/>)
             }
             <Users postDetail={postDetail}/>
         </div>

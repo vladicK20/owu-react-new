@@ -11,7 +11,11 @@ const Users = ({postDetail}) => {
     return (
         <div>
             {
-                users.map((user, index) => <User key={index} item={user} postDetail={postDetail}/>)
+                users.map((user, index) => <User
+                                                key={index}
+                                                item={user}
+                                                postDetail={postDetail}
+                />)
             }
         </div>
     );
