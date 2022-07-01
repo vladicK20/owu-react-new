@@ -6,20 +6,15 @@ const Users = () => {
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
             .then(value => value.json())
-            .then(value => {
-                setUsers(value)
+            .then(({results}) => {
+                setUsers([...results])
             })
     }, []);
 
     return (
         <div>
             {users.map(user => <User key={user.id}
-                                        name={user.name}
-                                        id={user.id}
-                                        status={user.status}
-                                        species={user.species}
-                                        gender={user.gender}
-                                        img={user.image}
+                                        item={user}
             />)}
         </div>
     );
